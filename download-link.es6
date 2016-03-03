@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DownloadLink = React.createClass({
+const RauDownloadLink = React.createClass({
 
   propTypes: {
     filename: React.PropTypes.string,
@@ -25,6 +25,8 @@ const DownloadLink = React.createClass({
         type: 'text/csv;charset=utf8;'
       });
 
+      this.setState({newFileConfirmation: false});
+      console.log(this.state);
       // create hidden link
       var element = document.createElement('a');
       document.body.appendChild(element);
@@ -53,7 +55,7 @@ const DownloadLink = React.createClass({
 
   render: function() {
     return (
-      <a style={ this.props.style }
+      <a className="rau-download-link" style={ this.props.style }
         onClick={ this.handleDownloadClick }>
         {this.props.label}
       </a>
@@ -62,4 +64,4 @@ const DownloadLink = React.createClass({
 })
 
 
-export default DownloadLink
+export default RauDownloadLink
