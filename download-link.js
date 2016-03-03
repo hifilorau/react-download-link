@@ -10,8 +10,8 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var DownloadLink = _react2.default.createClass({
-  displayName: 'DownloadLink',
+var RauDownloadLink = _react2.default.createClass({
+  displayName: 'RauDownloadLink',
 
   propTypes: {
     filename: _react2.default.PropTypes.string,
@@ -66,10 +66,11 @@ var DownloadLink = _react2.default.createClass({
     return _react2.default.createElement(
       'a',
       { style: this.props.style,
+        className: 'rau-download-link',
         onClick: this.handleDownloadClick },
       this.props.label
     );
   }
 });
 
-exports.default = DownloadLink;
+exports.default = RauDownloadLink;
