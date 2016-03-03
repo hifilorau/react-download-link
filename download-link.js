@@ -37,6 +37,8 @@ var RauDownloadLink = _react2.default.createClass({
         type: 'text/csv;charset=utf8;'
       });
 
+      this.setState({newFileConfirmation: false});
+      console.log(this.state);
       // create hidden link
       var element = document.createElement('a');
       document.body.appendChild(element);
